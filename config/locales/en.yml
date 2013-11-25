@@ -2,4 +2,14 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  spree:
+    zipcode_range_based: Zip Code Range Based
+    zipcode_ranges: Zip Code Ranges
+    new_zipcode_range: New Zip Code Range
+    listing_zipcode_ranges: Listing Zip Code Ranges
+    zipcode_range_name: Zip Code Range Name
+    zipcode_range_start_zip: Starting Zip
+    zipcode_range_end_zip: Ending Zip
+    back_to_zipcode_ranges_list: Back To Zip Code Ranges List
+    editing_zipcode_range: Editing Zip Code Range
+
