@@ -1,0 +1,2 @@
+<!-- insert_after "div[data-hook='admin_zone_form_fields']" -->
+<%= render :partial => 'zipcode_range_members', :locals => { :zone_form => zone_form } %>

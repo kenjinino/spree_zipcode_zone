@@ -1,0 +1,10 @@
+<div id="zipcode_range_members" data-hook="member" class="omega six columns">
+  <fieldset class="no-border-bottom">
+    <legend align="center"><%= Spree.t(:zipcode_ranges) %></legend>
+
+    <%= zone_form.field_container :zipcode_range_ids do %>
+      <%= zone_form.label :zipcode_range_ids, Spree.t(:zipcode_ranges) %><br>
+      <%= zone_form.collection_select :zipcode_range_ids, @zipcode_ranges, :id, :name, {}, { :multiple => true, :class => "select2 fullwidth" } %>
+    <% end %>
+  </fieldset>
+</div>
