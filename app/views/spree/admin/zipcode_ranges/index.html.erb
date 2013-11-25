@@ -1,0 +1,43 @@
+<%= render 'spree/admin/shared/configuration_menu' %>
+
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_zipcode_ranges) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <ul class="actions inline-menu">
+    <li>
+      <%= button_link_to Spree.t(:new_zipcode_range), new_object_url, { :icon => 'icon-plus', :id => 'admin_new_zipcode_range' } %>
+    </li>
+  </ul>
+<% end %>
+
+<table class="index" id='listing_zipcode_ranges' data-hook>
+  <colgroup>
+    <col style="width: 35%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 15%" />
+  </colgroup>
+  <thead>
+    <tr data-hook="zipcode_ranges_header">
+      <th><%= Spree.t(:zipcode_range_name) %></th>
+      <th><%= Spree.t(:zipcode_range_start_zip) %></th>
+      <th><%= Spree.t(:zipcode_range_end_zip) %></th>
+      <th class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @zipcode_ranges.each do |zipcode_range| %>
+      <tr id="<%= spree_dom_id zipcode_range %>" data-hook="zipcode_range_row" class="<%= cycle('odd', 'even')%>">
+        <td><%= zipcode_range.name %></td>
+        <td><%= zipcode_range.start_zip %></td>
+        <td><%= zipcode_range.end_zip %></td>
+        <td class="actions">
+          <%= link_to_edit zipcode_range, :no_text => true %>
+          <%= link_to_delete zipcode_range, :no_text => true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

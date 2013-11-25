@@ -1,0 +1,20 @@
+<div data-hook="admin_country_form_fields" class="row">
+  <div class="alpha four columns">
+    <div data-hook="name" class="field">
+      <%= f.label :name, Spree.t(:name) %>
+      <%= f.text_field :name, :class => 'fullwidth' %>
+    </div>
+  </div>
+  <div class="four columns">
+    <div data-hook="start_zip" class="field">
+      <%= f.label :start_zip, Spree.t(:zipcode_range_start_zip) %>
+      <%= f.text_field :start_zip, :class => 'fullwidth' %>
+    </div>
+  </div>
+  <div class="omega four columns">
+    <div data-hook="end_zip" class="field">
+      <%= f.label :end_zip, Spree.t(:zipcode_range_end_zip) %>
+      <%= f.text_field :end_zip, :class => 'fullwidth' %>
+    </div>
+  </div>
+</div>
